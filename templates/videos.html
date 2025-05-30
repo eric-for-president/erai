@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+        /* Style for video containers if needed */
+        .video-item {
+            margin-bottom: 2rem; /* Add space below each video item */
+            background-color: #f8f9fa; /* Light background for the card */
+            padding: 1rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .video-item h5 {
+            margin-top: 0.75rem; /* Space above video title */
+        }
+        /* Responsive iframe container */
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove default iframe border */
+        }
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background-color: #000; /* fallback */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+}
+
+    </style>
+
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Video Tutorials</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="https://demoapp-morning-bird-7209.fly.dev/static/index.html">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Youtube</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Videos</h6>
+                <h1 class="mb-5">Our Video Library</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/N349SLNdTwg?si=WPYiVoD9KBeErJ5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        <h5 class="text-center">learn C programming in an hour</h5>
+                        <p class="text-center small">Mother of all programming language</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Gx5qb1uHss4?si=eH7_ANPKs9Lz4puK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        <h5 class="text-center">10 Important Python concepts</h5>
+                        <p class="text-center small">Dive deep into the python universe</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s"> <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://demoapp-morning-bird-7209.fly.dev/static/YOUR_YOUTUBE_EMBED_LINK_3" title="YouTube video player 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        <h5 class="text-center">Video Title 3: Advanced Techniques</h5>
+                        <p class="text-center small">Diving deeper into more complex methods.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s"> <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://demoapp-morning-bird-7209.fly.dev/static/YOUR_YOUTUBE_EMBED_LINK_4" title="YouTube video player 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        <h5 class="text-center">Video Title 4: Practical Example</h5>
+                        <p class="text-center small">A hands-on demonstration or project walkthrough.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                     <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://demoapp-morning-bird-7209.fly.dev/static/YOUR_YOUTUBE_EMBED_LINK_5" title="YouTube video player 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        <h5 class="text-center">Video Title 5: Q&A Session</h5>
+                        <p class="text-center small">Answering common questions about the topic.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                     <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://demoapp-morning-bird-7209.fly.dev/static/YOUR_YOUTUBE_EMBED_LINK_6" title="YouTube video player 6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        <h5 class="text-center">Video Title 6: Tips & Tricks</h5>
+                     <p class="text-center small">Useful hints and shortcuts for efficiency.</p>
+                    </div>
+                </div>
+
+                <!-- Python Video -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Python Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <h5 class="text-center">Python Tutorial for Beginners</h5>
+                        <p class="text-center small">Learn the basics of Python programming.</p>
+                    </div>
+                </div>
+
+                <!-- Django Video -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/rHux0gMZ3Eg" title="Django Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <h5 class="text-center">Django Tutorial for Beginners</h5>
+                        <p class="text-center small">Build web applications with Django.</p>
+                    </div>
+                </div>
+
+                <!-- FastAPI Video -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="video-item">
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/7t2alSnE2-I" title="FastAPI Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <h5 class="text-center">FastAPI Tutorial</h5>
+                        <p class="text-center small">Create high-performance APIs with FastAPI.</p>
+                    </div>
+                </div>
+
+                 </div>
+        </div>
+    </div>
+    
+
+{% endblock content %}

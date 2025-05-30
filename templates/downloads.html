@@ -1,0 +1,115 @@
+
+    
+    {% extends "base.html" %}
+{% load static %}
+
+    
+
+ {% block content %}
+
+
+
+
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Downloads</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="https://demoapp-morning-bird-7209.fly.dev/index.html">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Downloads</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <h6 class="section-title bg-white text-center text-primary px-3">Resources</h6>
+                <h1 class="mb-5">Download Course Materials</h1>
+            </div>
+
+            <section class="download-category mb-5 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <h2 class="mb-4"><i class="fas fa-file-pdf text-danger me-2" aria-hidden="true"></i>PDF Notes &amp; Cheat Sheets</h2>
+
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                    <div class="item-icon me-3">
+                        <i class="fas fa-file-pdf fa-2x text-danger" aria-hidden="true"></i>
+                    </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">Python Basics Cheat Sheet</h5>
+                        <p class="small mb-0 text-muted">Quick reference for fundamental Python syntax.</p>
+                    </div>
+                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_PDF_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download</a>
+                </div>
+
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                     <div class="item-icon me-3">
+                        <i class="fas fa-file-pdf fa-2x text-danger" aria-hidden="true"></i>
+                    </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">C Programming Pointer Guide</h5>
+                        <p class="small mb-0 text-muted">In-depth guide explaining pointers in C.</p>
+                    </div>
+                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_PDF_LINK_2" target="_blank" class="btn btn-primary btn-sm">Download</a>
+                </div>
+                 </section>
+
+            <section class="download-category mb-5 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                <h2 class="mb-4"><i class="fas fa-file-code text-info me-2" aria-hidden="true"></i>Source Code Examples</h2>
+
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                    <div class="item-icon me-3">
+                         <i class="fab fa-github fa-2x text-dark" aria-hidden="true"></i> </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">Django Project Starter Template</h5>
+                        <p class="small mb-0 text-muted">Basic Django project structure on GitHub.</p>
+                    </div>
+                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GITHUB_REPO_LINK_1" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github me-1" aria-hidden="true"></i> View on GitHub</a>
+                </div>
+
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                     <div class="item-icon me-3">
+                        <i class="fas fa-file-archive fa-2x text-warning" aria-hidden="true"></i> </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">JavaScript DOM Examples (.zip)</h5>
+                        <p class="small mb-0 text-muted">Collection of small JS examples for DOM manipulation.</p>
+                    </div>
+                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_ZIP_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download .zip</a>
+                </div>
+                 </section>
+
+             <section class="download-category mb-5 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                <h2 class="mb-4"><i class="fas fa-file-video text-success me-2" aria-hidden="true"></i>Downloadable Video Lectures</h2>
+                <p class="text-muted small mb-3">Note: Video files can be large. Ensure you have sufficient bandwidth and storage.</p>
+
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                    <div class="item-icon me-3">
+                        <i class="fas fa-file-video fa-2x text-success" aria-hidden="true"></i>
+                    </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">FastAPI Introduction Lecture (.mp4)</h5>
+                        <p class="small mb-0 text-muted">Full video lecture covering FastAPI basics (Hosted on Drive).</p>
+                    </div>
+                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_VIDEO_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download Video</a>
+                </div>
+
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                     <div class="item-icon me-3">
+                        <i class="fas fa-file-video fa-2x text-success" aria-hidden="true"></i>
+                    </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">QBasic Graphics Tutorial (.mp4)</h5>
+                        <p class="small mb-0 text-muted">Video tutorial on QBasic graphics commands (Hosted on Mega.nz).</p>
+                    </div>
+                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_MEGA_IO_VIDEO_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download Video</a>
+                </div>
+                 </section>
+
+        </div>
+    </div>
+    
+{% endblock %}
