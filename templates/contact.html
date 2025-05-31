@@ -5,6 +5,10 @@
 
  {% block content %}
 
+{% if hello_message %}
+    <div class="alert alert-success text-center">{{ hello_message }}</div>
+{% endif %}
+
 
 
     <!-- Contact Start -->
@@ -99,4 +103,35 @@
     <!-- Contact End -->
 
     
+<!-- WhatsApp Chat Button Start -->
+<a href="https://wa.me/9779804313364" target="_blank" id="whatsapp-chat-btn" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<style>
+#whatsapp-chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: background 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+}
+#whatsapp-chat-btn:hover {
+    background: #128c7e;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+    color: #fff;
+}
+</style>
+<!-- WhatsApp Chat Button End -->
+
 {% endblock  %}
