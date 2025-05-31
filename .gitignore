@@ -8,3 +8,4 @@ wheels/
 
 # Virtual environments
 .venv
+erai_project/settings.py
