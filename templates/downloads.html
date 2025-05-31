@@ -1,6 +1,4 @@
-
-    
-    {% extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
     
@@ -37,13 +35,25 @@
 
                 <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
                     <div class="item-icon me-3">
-                        <i class="fas fa-file-pdf fa-2x text-danger" aria-hidden="true"></i>
+                        <i class="fas fa-file-pdf fa-2x text-danger" aria-hidden="true"></i> +
+                        <i class="fas fa-film fa-2x text-success" aria-hidden="true"></i>
                     </div>
                     <div class="item-details me-3">
-                        <h5 class="mb-1">Python Basics Cheat Sheet</h5>
-                        <p class="small mb-0 text-muted">Quick reference for fundamental Python syntax.</p>
+                        <h5 class="mb-1">The Data Scientist's tools</h5>
+                        <p class="small mb-0 text-muted">Everything you need to be a data scientist</p>
                     </div>
-                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_PDF_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download</a>
+                    <a href="https://drive.google.com/drive/folders/1CgN7DE3pNRNh_4BA_zrrMLqWz6KquwuD" target="_blank" class="btn btn-primary btn-sm">Download</a>
+                </div>
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                    <div class="item-icon me-3">
+                        <i class="fas fa-file-pdf fa-2x text-danger" aria-hidden="true"></i> +
+                        <i class="fas fa-film fa-2x text-success" aria-hidden="true"></i>
+                    </div>
+                    <div class="item-details me-3">
+                        <h5 class="mb-1">Django Tutorials</h5>
+                        <p class="small mb-0 text-muted">Everything you need to be a fullstack engineer</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1hjTEM8tt5vThWVlPLnbBi2CXceJI0Q2w?usp=sharing" target="_blank" class="btn btn-primary btn-sm">Download</a>
                 </div>
 
                 <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
@@ -54,7 +64,18 @@
                         <h5 class="mb-1">C Programming Pointer Guide</h5>
                         <p class="small mb-0 text-muted">In-depth guide explaining pointers in C.</p>
                     </div>
-                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_PDF_LINK_2" target="_blank" class="btn btn-primary btn-sm">Download</a>
+                    <a href="https://drive.google.com/drive/folders/0B_Wr3rZKpxDuZVlTWU1yUlpBNzQ?resourcekey=0-b-RemjnwFdzBeKLtp0Tkxg" target="_blank" class="btn btn-primary btn-sm">Download</a>
+                </div>
+                <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
+                     <div class="item-icon me-3 d-flex align-items-center">
+                        <i class="fas fa-file-pdf fa-2x text-danger" aria-hidden="true"></i>
+                        <img src="{% static 'mywebapp/img/scratch1.gif' %}" alt="Scratch Cat" style="width:48px;height:48px;margin-left:10px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.10);animation: scratch-bounce 1.2s infinite alternate;">
+                    </div>
+                <div class="item-details me-3">
+                        <h5 class="mb-1">Scratch 3 Playground</h5>
+                        <p class="small mb-0 text-muted">Learn coding in a fun way</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1Mqvj1z4u0mHNKL0kIJFj6JLscWSi638N?usp=sharing" target="_blank" class="btn btn-primary btn-sm">Download</a>
                 </div>
                  </section>
 
@@ -65,20 +86,20 @@
                     <div class="item-icon me-3">
                          <i class="fab fa-github fa-2x text-dark" aria-hidden="true"></i> </div>
                     <div class="item-details me-3">
-                        <h5 class="mb-1">Django Project Starter Template</h5>
-                        <p class="small mb-0 text-muted">Basic Django project structure on GitHub.</p>
+                        <h5 class="mb-1">Fullstack FastAPI Template</h5>
+                        <p class="small mb-0 text-muted">FastAPI project structure on GitHub.</p>
                     </div>
-                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GITHUB_REPO_LINK_1" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github me-1" aria-hidden="true"></i> View on GitHub</a>
+                    <a href="https://github.com/fastapi/full-stack-fastapi-template" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github me-1" aria-hidden="true"></i> View on GitHub</a>
                 </div>
 
                 <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
                      <div class="item-icon me-3">
-                        <i class="fas fa-file-archive fa-2x text-warning" aria-hidden="true"></i> </div>
+                        <i class="fab fa-github fa-2x text-dark" aria-hidden="true"></i> </div>
                     <div class="item-details me-3">
-                        <h5 class="mb-1">JavaScript DOM Examples (.zip)</h5>
-                        <p class="small mb-0 text-muted">Collection of small JS examples for DOM manipulation.</p>
+                        <h5 class="mb-1">Curated List of Awesome Scratch Projects</h5>
+                        <p class="small mb-0 text-muted">Collection of infamous scratch works.</p>
                     </div>
-                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_ZIP_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download .zip</a>
+                    <a href="https://github.com/CodeLabClub/awesome-scratch-projects" target="_blank" class="btn btn-secondary btn-sm"><i class="fab fa-github me-1" aria-hidden="true"></i> View on GitHub</a>
                 </div>
                  </section>
 
@@ -91,10 +112,10 @@
                         <i class="fas fa-file-video fa-2x text-success" aria-hidden="true"></i>
                     </div>
                     <div class="item-details me-3">
-                        <h5 class="mb-1">FastAPI Introduction Lecture (.mp4)</h5>
-                        <p class="small mb-0 text-muted">Full video lecture covering FastAPI basics (Hosted on Drive).</p>
+                        <h5 class="mb-1">Ethical Hacking Bootcamp</h5>
+                        <p class="small mb-0 text-muted">Full video lecture covering Ethical Hacking (Hosted on Drive).</p>
                     </div>
-                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_GOOGLE_DRIVE_VIDEO_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download Video</a>
+                    <a href="https://drive.google.com/drive/folders/16sJxgSE-dd68OK-Sk6CYp1mmiqDpQ7z0?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">Download Video</a>
                 </div>
 
                 <div class="download-item d-flex justify-content-between align-items-center p-3 border mb-3">
@@ -102,14 +123,52 @@
                         <i class="fas fa-file-video fa-2x text-success" aria-hidden="true"></i>
                     </div>
                     <div class="item-details me-3">
-                        <h5 class="mb-1">QBasic Graphics Tutorial (.mp4)</h5>
-                        <p class="small mb-0 text-muted">Video tutorial on QBasic graphics commands (Hosted on Mega.nz).</p>
+                        <h5 class="mb-1">Peer To Peer seeded files </h5>
+                        <p class="small mb-0 text-muted">Video tutorial on Miscellaenous topics</p>
                     </div>
-                    <a href="https://demoapp-morning-bird-7209.fly.dev/YOUR_MEGA_IO_VIDEO_LINK_1" target="_blank" class="btn btn-primary btn-sm">Download Video</a>
+                    <a href="https://drive.google.com/drive/folders/15BzKNi0tA_CUp57jwJMpfbf0n-oQRMaZ?usp=drive_link" target="_blank" class="btn btn-primary btn-sm">Download Video</a>
                 </div>
                  </section>
 
         </div>
     </div>
+    
+<div id="moving-scratch-gif-1">
+  <img src="{% static 'mywebapp/img/cool_scratch.png' %}" alt="Scratch Cat 1" style="width:120px;height:120px;border-radius:24px;box-shadow:0 2px 12px rgba(0,0,0,0.15);">
+</div>
+<div id="moving-scratch-gif-2">
+  <img src="{% static 'mywebapp/img/scratch3.gif' %}" alt="Scratch Cat 2" style="width:120px;height:120px;border-radius:24px;box-shadow:0 2px 12px rgba(0,0,0,0.15);">
+</div>
+<style>
+#moving-scratch-gif-1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  animation: move-corners-1 8s linear infinite alternate;
+}
+#moving-scratch-gif-2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9998;
+  animation: move-corners-2 8s linear infinite alternate;
+  animation-delay: 4s;
+}
+@keyframes move-corners-1 {
+  0%   { left: 0;   top: 0; }
+  25%  { left: calc(100vw - 120px); top: 0; }
+  50%  { left: calc(100vw - 120px); top: calc(100vh - 120px); }
+  75%  { left: 0;   top: calc(100vh - 120px); }
+  100% { left: 0;   top: 0; }
+}
+@keyframes move-corners-2 {
+  0%   { left: calc(100vw - 120px); top: 0; }
+  25%  { left: calc(100vw - 120px); top: calc(100vh - 120px); }
+  50%  { left: 0;   top: calc(100vh - 120px); }
+  75%  { left: 0;   top: 0; }
+  100% { left: calc(100vw - 120px); top: 0; }
+}
+</style>
     
 {% endblock %}
