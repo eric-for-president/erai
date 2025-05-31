@@ -45,14 +45,14 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href=" {% static 'mywebapp/index.html' %} " class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h4 class="m-0 text-primary">
+            <h3 class="m-0 text-primary">
                 
                  <div class="flex-shrink-0 flex items-center">
                         <i class="fas fa-robot text-blue-800 text-2xl mr-2 animate-pulse"></i>
                         <span class="text-xl font-bold text-blue-800">Ethical Robotics & AI</span>
                     </div>
                     
-                </h4>
+                </h3>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,7 @@
                 
                 <a href="  {% url "videos" %}" class="nav-item nav-link"><i class="fa-brands fa-youtube"></i>Videos</a>
                 <a href=" {% url "downloads" %} " class="nav-item nav-link">Downloads <i class="fa-solid fa-download"></i></a>
-                <a href=" {% url 'courses' %} " class="nav-item nav-link">Courses</a>
+                {% comment %} <a href=" {% url 'courses' %} " class="nav-item nav-link">Courses</a> {% endcomment %}
                
                 <a href=" {% url 'contact' %} " class="nav-item nav-link">Contact Us</a>
 
