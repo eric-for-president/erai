@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                     <form action="/contact.html" method="post">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="4f0K8nt54PZIP7FcnVq7fEJk6F9CtNnSTxTNdRfufkisaTfqNBkVuPPpxLL7CNpj">
+                        {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">

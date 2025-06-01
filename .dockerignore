@@ -1,3 +1,5 @@
-.venv/
+fly.toml
+.git/
 *.sqlite3
-.git
+.venv
+poetry.lock
