@@ -4,6 +4,9 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import send_mail
+from .models import BlogPost
+from .forms import BlogPostForm, CommentForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class home_page_view(TemplateView):
@@ -68,3 +71,38 @@ def login_page_view(request):
 def logout_view(request):
     auth_logout(request)
     return redirect('home')
+
+def blog_list_view(request):
+    posts = BlogPost.objects.all().order_by('-created_at')
+    return render(request, 'blog_list.html', {'posts': posts})
+
+@login_required
+def blog_create_view(request):
+    if request.method == 'POST':
+        form = BlogPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            blog_post = form.save(commit=False)
+            blog_post.author = request.user
+            blog_post.save()
+            return redirect('blog_list')
+    else:
+        form = BlogPostForm()
+    return render(request, 'blog_create.html', {'form': form})
+
+def blog_detail_view(request, pk):
+    post = BlogPost.objects.get(pk=pk)
+    comments = post.comments.all().order_by('created_at')
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            comment_form = CommentForm(request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.author = request.user
+                comment.post = post
+                comment.save()
+                return redirect('blog_detail', pk=pk)
+        else:
+            return redirect('login')
+    else:
+        comment_form = CommentForm()
+    return render(request, 'blog_detail.html', {'post': post, 'comments': comments, 'comment_form': comment_form})
