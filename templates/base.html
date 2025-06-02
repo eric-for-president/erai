@@ -75,9 +75,10 @@
                     <span class="nav-item nav-link">Logged in as {{ user.username }}</span>
                     <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
                 {% else %}
-                    <a href=" {% url "login" %}  " class="nav-item nav-link">Login</a>
-                    
-                     <a href="{% url 'register' %}" class="btn btn-primary py-2 px-lg-3 d-none d-lg-block ms-lg-3">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href=" {% url 'login' %}  " class="nav-item nav-link">Login</a>
+                    <a href="{% url 'register' %}" class="btn btn-primary py-2 px-lg-3 ms-lg-3 d-flex align-items-center gap-2" style="font-size: 1.2rem; font-weight: 600;">
+                        Join Now <i class="fa fa-arrow-right"></i>
+                    </a>
                 {% endif %}
                  
             </div> 

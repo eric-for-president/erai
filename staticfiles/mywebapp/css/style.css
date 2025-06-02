@@ -195,6 +195,11 @@
     background: var(--primary);
     border-color: var(--primary);
 }
+  .team-item img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
 
 .page-header {
     background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
