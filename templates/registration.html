@@ -14,23 +14,27 @@
                             <div class="alert alert-danger">{{ message }}</div>
                         {% endfor %}
                     {% endif %}
-                    <form method="post">
+                    <form method="post" id="registrationForm" novalidate>
                         {% csrf_token %}
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" required>
+                            <input type="text" class="form-control" id="username" name="username" required minlength="3" maxlength="150" pattern="^[\w.@+-]+$">
+                            <div class="invalid-feedback">Please enter a valid username (letters, numbers, and @/./+/-/_ only, min 3 chars).</div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
                         <div class="mb-3">
                             <label for="password1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password1" name="password1" required>
+                            <input type="password" class="form-control" id="password1" name="password1" required minlength="6">
+                            <div class="invalid-feedback">Password must be at least 6 characters.</div>
                         </div>
                         <div class="mb-3">
                             <label for="password2" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="password2" name="password2" required>
+                            <input type="password" class="form-control" id="password2" name="password2" required minlength="6">
+                            <div class="invalid-feedback">Passwords do not match.</div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Register</button>
                     </form>
@@ -42,4 +46,25 @@
         </div>
     </div>
 </div>
+<script>
+// Bootstrap validation
+(function() {
+    var form = document.getElementById('registrationForm');
+    form.addEventListener('submit', function(event) {
+        // Password match check
+        var pw1 = document.getElementById('password1');
+        var pw2 = document.getElementById('password2');
+        if (pw1.value !== pw2.value) {
+            pw2.setCustomValidity('Passwords do not match');
+        } else {
+            pw2.setCustomValidity('');
+        }
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    }, false);
+})();
+</script>
 {% endblock %}
