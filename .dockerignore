@@ -1,5 +1,47 @@
-fly.toml
-.git/
+# Version control
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Build / packaging
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+dist/
+build/
+
+# Local settings & secrets
 *.sqlite3
-.venv
+*.log
+*.pot
+*.pyc
+
+# Dependency managers
+Pipfile.lock
 poetry.lock
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Node (if using front-end build tools)
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Fly.io config should NOT be ignored
+!fly.toml
